@@ -110,3 +110,21 @@ E:\Gamica Cloud\Git>git commit -m "I worked it for test"
  create mode 100644 test.html
 
 E:\Gamica Cloud\Git>
+
+
+git init
+(one time only)
+
+
+git add .
+git commit -m<your Message>
+
+//want to upload
+git push origin master
+
+//want to download
+git pull origin master
+
+
+git checkout -b <branch name>
+git checkout <branch name>
