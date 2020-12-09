@@ -1,3 +1,26 @@
+
+git init
+(one time only)
+
+
+git add .
+git commit -m<your Message>
+
+//want to upload
+git push origin master
+
+//want to download
+git pull origin master
+
+// create new branch
+git checkout -b <branch name>
+
+//access branch
+git checkout <branch name>
+
+
+
+//////////
 Microsoft Windows [Version 10.0.18363.1198]
 (c) 2019 Microsoft Corporation. All rights reserved.
 
@@ -109,22 +132,110 @@ E:\Gamica Cloud\Git>git commit -m "I worked it for test"
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 test.html
 
+E:\Gamica Cloud\Git>git remote add abc https://github.com/bilalnaveed112/Test.git
+
+E:\Gamica Cloud\Git> git remote -v
+abc     https://github.com/bilalnaveed112/Test.git (fetch)
+abc     https://github.com/bilalnaveed112/Test.git (push)
+
+E:\Gamica Cloud\Git>git add .
+
+E:\Gamica Cloud\Git>git commit -m "files adding"
+[master feeb2c7] files adding
+ 2 files changed, 112 insertions(+)
+ create mode 100644 git codes.txt
+ create mode 100644 index.html
+
+E:\Gamica Cloud\Git>git push abc master
+info: please complete authentication in your browser...
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 2.06 KiB | 1.03 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/bilalnaveed112/Test.git
+ * [new branch]      master -> master
+
+E:\Gamica Cloud\Git>git push abc master
+Everything up-to-date
+
+E:\Gamica Cloud\Git>git pull abc master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 643 bytes | 3.00 KiB/s, done.
+From https://github.com/bilalnaveed112/Test
+ * branch            master     -> FETCH_HEAD
+   feeb2c7..c256b13  master     -> abc/master
+Updating feeb2c7..c256b13
+Fast-forward
+ test1.html | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test1.html
+
+E:\Gamica Cloud\Git>git remote rm abc
+
+E:\Gamica Cloud\Git>git remote -v
+
+E:\Gamica Cloud\Git>git checkout -b newtest
+Switched to a new branch 'newtest'
+
+E:\Gamica Cloud\Git>git branch
+  master
+* newtest
+
+E:\Gamica Cloud\Git>git status
+On branch newtest
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git codes.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        branch.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+E:\Gamica Cloud\Git>git add .
+
+E:\Gamica Cloud\Git>git commit -m "branch practice"
+[newtest 7bfeb27] branch practice
+ 2 files changed, 19 insertions(+), 1 deletion(-)
+ create mode 100644 branch.html
+
+E:\Gamica Cloud\Git>git status
+On branch newtest
+nothing to commit, working tree clean
+
+E:\Gamica Cloud\Git>git remote add origin https://github.com/bilalnaveed112/Test.git
+
+E:\Gamica Cloud\Git>git branch
+  master
+* newtest
+
+E:\Gamica Cloud\Git>git checkout master
+Switched to branch 'master'
+
+E:\Gamica Cloud\Git>git checkout newtest
+Switched to branch 'newtest'
+
+E:\Gamica Cloud\Git>git push origin newtest
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 445 bytes | 445.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'newtest' on GitHub by visiting:
+remote:      https://github.com/bilalnaveed112/Test/pull/new/newtest
+remote:
+To https://github.com/bilalnaveed112/Test.git
+ * [new branch]      newtest -> newtest
+
 E:\Gamica Cloud\Git>
 
-
-git init
-(one time only)
-
-
-git add .
-git commit -m<your Message>
-
-//want to upload
-git push origin master
-
-//want to download
-git pull origin master
-
-
-git checkout -b <branch name>
-git checkout <branch name>
